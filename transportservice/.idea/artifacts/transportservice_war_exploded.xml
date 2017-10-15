@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="transportservice:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/transportservice_war_exploded</output-path>
+    <root id="archive" name="transportservice_war exploded.war">
+      <element id="javaee-facet-resources" facet="transportservice/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="transportservice" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.12-bin" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

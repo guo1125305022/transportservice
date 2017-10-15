@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!--小车速度获取-->
+
+    <servlet>
+        <servlet-name>CarSpeed</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.car.CarSpeed</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CarSpeed</servlet-name>
+        <url-pattern>/action/GetCarSpeed.do</url-pattern>
+    </servlet-mapping>
+
+    <!--小车动作设置-->
+    <servlet>
+        <servlet-name>CarAction</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.car.CarAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CarAction</servlet-name>
+        <url-pattern>/action/SetCarMove.do</url-pattern>
+    </servlet-mapping>
+
+    <!--小车金额充值-->
+    <servlet>
+        <servlet-name>CarAccountBalanceSet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.car.CarAccountBalanceSet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CarAccountBalanceSet</servlet-name>
+        <url-pattern>/action/SetCarAccountRecharge.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!--小车余额查询-->
+    <servlet>
+        <servlet-name>CarAccountBalanceGet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.car.CarAccountBalanceGet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CarAccountBalanceGet</servlet-name>
+        <url-pattern>/action/GetCarAccountBalance.do</url-pattern>
+    </servlet-mapping>
+
+    <!--公交信息查询-->
+    <servlet>
+        <servlet-name>BusstationInfoGet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.bus.BusstationInfoGet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BusstationInfoGet</servlet-name>
+        <url-pattern>/action/GetBusStationInfo.do</url-pattern>
+    </servlet-mapping>
+
+    <!--红绿灯-->
+    <servlet>
+        <servlet-name>TrafficLightConfigAciton</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.TrafficLight.TrafficLightConfigAciton</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TrafficLightConfigAciton</servlet-name>
+        <url-pattern>/action/GetTrafficLightConfigAction.do</url-pattern>
+    </servlet-mapping>
+
+    <!--获取指定红绿灯指定等的时间-->
+    <servlet>
+        <servlet-name>TrafficLightNowStatusGet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.TrafficLight.TrafficLightNowStatusGet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TrafficLightNowStatusGet</servlet-name>
+        <url-pattern>/action/GetTrafficLightNowStatus.do</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!--单个红绿灯中指定灯设置-->
+    <servlet>
+        <servlet-name>TrafficLightNowStatusSet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.TrafficLight.TrafficLightNowStatusSet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TrafficLightNowStatusSet</servlet-name>
+        <url-pattern>/action/SetTrafficLightNowStatus.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!--单个红绿灯中所有值设置-->
+    <servlet>
+        <servlet-name>TrafficLightConfigSet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.TrafficLight.TrafficLightConfigSet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TrafficLightConfigSet</servlet-name>
+        <url-pattern>/action/SetTrafficLightConfig.do</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!--光线传感器-->
+    <servlet>
+        <servlet-name>LightSenseValve</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.sensor.LightSenseValve</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LightSenseValve</servlet-name>
+        <url-pattern>/action/GetLightSenseValve.do</url-pattern>
+    </servlet-mapping>
+
+    <!--获取环境信息-->
+    <servlet>
+        <servlet-name>AllSenseGet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.sensor.AllSenseGet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AllSenseGet</servlet-name>
+        <url-pattern>/action/GetAllSense.do</url-pattern>
+    </servlet-mapping>
+
+    <!--单个传感器查询-->
+    <servlet>
+        <servlet-name>GetSenseByName</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.sensor.GetSenseByName</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetSenseByName</servlet-name>
+        <url-pattern>/action/GetSenseByName.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!--获取停车场费率查询-->
+    <servlet>
+        <servlet-name>ParkRateGet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.park.ParkRateGet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParkRateGet</servlet-name>
+        <url-pattern>/action/GetParkRate.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!--停车停车位查询-->
+    <servlet>
+        <servlet-name>ParkRateGetLocation</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.park.ParkRateGetLocation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParkRateGetLocation</servlet-name>
+        <url-pattern>/action/GetParkFree.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!--设置停车费率-->
+    <servlet>
+        <servlet-name>ParkRateSet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.park.ParkRateSet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ParkRateSet</servlet-name>
+        <url-pattern>/action/SetParkRate.do</url-pattern>
+    </servlet-mapping>
+
+    <!--用户登陆-->
+    <servlet>
+        <servlet-name>UserLoginRequst</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.user.UserLoginRequst</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserLoginRequst</servlet-name>
+        <url-pattern>/action/UserLoginRequst.do</url-pattern>
+    </servlet-mapping>
+
+    <!--用户注册-->
+    <servlet>
+        <servlet-name>UserRegister</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.user.UserRegister</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserRegister</servlet-name>
+        <url-pattern>/action/UserRegister.do</url-pattern>
+    </servlet-mapping>
+
+    <!--请求公交载人数量-->
+    <servlet>
+        <servlet-name>GetBusCapacit</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.bus.GetBusCapacity</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetBusCapacit</servlet-name>
+        <url-pattern>/action/GetBusCapacit.do</url-pattern>
+    </servlet-mapping>
+
+    <!--查询路灯状态-->
+    <servlet>
+        <servlet-name>RoadLightStatusGet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.road.RoadLightStatusGet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RoadLightStatusGet</servlet-name>
+        <url-pattern>/action/GetRoadLightStatus.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!--路灯控制模式设置-->
+    <servlet>
+        <servlet-name>RoadLightControlModeSet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.road.RoadLightControlModeSet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RoadLightControlModeSet</servlet-name>
+        <url-pattern>/action/SetRoadLightControlMode.do</url-pattern>
+    </servlet-mapping>
+
+    <!--单个路灯打开状态设置设置-->
+    <servlet>
+        <servlet-name>RoadLightStatusActionSet</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.road.RoadLightControlModeSet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RoadLightStatusActionSet</servlet-name>
+        <url-pattern>/action/SetRoadLightStatusAction.do</url-pattern>
+    </servlet-mapping>
+
+    <!--获取道路拥挤状态-->
+    <servlet>
+        <servlet-name>GetRoadStatus</servlet-name>
+        <servlet-class>type.jason.action.clienteleRequst.road.GetRoadStatus</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetRoadStatus</servlet-name>
+        <url-pattern>/action/GetRoadStatus.do</url-pattern>
+    </servlet-mapping>
+</web-app>
